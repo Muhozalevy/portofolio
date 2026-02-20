@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (

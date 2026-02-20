@@ -1,0 +1,80 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg); /* Utilise ton fond sombre */
+  border-bottom: 1px solid #334155;
+  z-index: 1000;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary); /* Bleu React */
+  letter-spacing: -1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* --- Responsive (Mobile) --- */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: var(--navbar-height);
+    right: -100%; /* Caché par défaut */
+    flex-direction: column;
+    background-color: var(--card-bg);
+    width: 70%;
+    height: 100vh;
+    padding: 2rem;
+    transition: 0.4s ease-in-out;
+    gap: 2.5rem;
+    border-left: 1px solid #334155;
+  }
+
+  .navbar-links.open {
+    right: 0; /* Apparaît au clic */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

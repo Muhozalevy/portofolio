@@ -1,0 +1,59 @@
+.hero {
+  /* On décale tout vers le bas. 
+     Ta navbar fait environ 60px-70px avec le padding, 
+     donc on met un peu plus pour respirer. */
+  padding-top: 100px; 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary); /* Force la couleur bleu React */
+  font-weight: 800;
+  /* On nettoie les propriétés de dégradé qui faisaient bugger */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-dim); /* Gris doux pour ne pas agresser l'oeil */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  display: inline-block;
+  /* Le bouton devient bleu cyan (React style) avec texte sombre */
+  background: var(--primary);
+  color: #0f172a; 
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(97, 218, 251, 0.2);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(97, 218, 251, 0.4);
+  filter: brightness(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 80px 20px 40px 20px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}

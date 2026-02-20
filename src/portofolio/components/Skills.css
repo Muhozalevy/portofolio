@@ -1,0 +1,71 @@
+.skills {
+  padding: 40px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.skills ul {
+  display: flex;          /* On passe en Flex pour un meilleur contrôle du centrage */
+  flex-wrap: wrap;        /* Pour revenir à la ligne si besoin */
+  justify-content: center; /* CENTRE LES BADGES */
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;         /* Centre le bloc complet */
+}
+
+.skills li {
+  min-width: 120px;       /* Donne une taille homogène */
+  /* ... reste de ton code ... */
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+/* Petit trait sous le titre pour le style */
+.skills h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--primary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.skills ul {
+  display: grid;
+  /* On ajuste la taille pour des badges plus élégants */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  /* On remplace le gris clair par le fond des cartes */
+  background: var(--card-bg);
+  color: var(--primary); /* Le texte prend la couleur bleu React */
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid #334155; /* Fine bordure pour la structure */
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Effet au survol des badges de compétences */
+.skills li:hover {
+  background: rgba(97, 218, 251, 0.1); /* Légère lueur bleue */
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

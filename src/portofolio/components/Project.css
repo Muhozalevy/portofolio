@@ -1,0 +1,105 @@
+/* Section globale */
+.projects {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+ 
+}
+
+/* Grille réactive */
+.projects-grid {
+  display: grid;
+  /* Garantit que les cartes ne sont pas trop étroites */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Style de la carte */
+.project-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.project-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.project-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Aligne les liens en bas peu importe la longueur du texte */
+}
+
+/* Badges technologiques */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  background: #eff6ff;
+  color: #3b82f6;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Liens d'action */
+.project-links {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 15px;
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-links a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Mobile : ajustement du titre */
+@media (max-width: 640px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+}
